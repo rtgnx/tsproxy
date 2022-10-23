@@ -64,7 +64,7 @@ func main() {
 		proc.Env,
 		fmt.Sprintf("https_proxy=socks5://%s", addr),
 		fmt.Sprintf("http_proxy=socks5://%s", addr),
-		fmt.Sprintf("socks5_proxy=socks5://%s", addr),
+		fmt.Sprintf("socks5_proxy=%s", addr),
 	)
 
 	if err := proc.Run(); err != nil {
